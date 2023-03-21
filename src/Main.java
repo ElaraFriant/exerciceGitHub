@@ -5,6 +5,5 @@ public class Main {
         System.out.println("How you doin'?");
         System.out.println("patate");
         System.out.println("loutre");
-        System.out.println("");
     }
 }
