@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        int choix = 1;
+        int choix = 0;
 
         Anglais vAnglais = new Anglais();
         vAnglais.addDico("Bonjour", "Hello");
@@ -14,12 +14,17 @@ public class App {
         System.out.println("1 : Anglais");
         System.out.println("2 : Breton");
 
-        choix = scan.nextInt();
 
-        if(choix == 1){
-            System.out.println(vAnglais.getTraduction("Bonjour"));
-        }else{
-            System.out.println(vBreton.getTraduction("Bonjour"));
+
+        while (choix != 1 && choix !=2) {
+            choix = scan.nextInt();
+            if (choix == 1) {
+                System.out.println(vAnglais.getTraduction("Bonjour"));
+            } else if (choix ==2) {
+                System.out.println(vBreton.getTraduction("Bonjour"));
+            } else {
+                System.out.println("Veuillez choisir une option valide");
+            }
         }
 
 
